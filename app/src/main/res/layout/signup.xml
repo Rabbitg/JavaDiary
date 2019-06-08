@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
-    android:background="@drawable/leafback"
-    android:alpha="0.65"
+    android:background="#fff"
     >
 
     <ScrollView
@@ -26,7 +25,9 @@
                 android:padding="16dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/penceil"/>
+                android:src="@drawable/feather"
+                android:alpha="0.5"
+                />
 
             <EditText
                 android:layout_width="match_parent"
@@ -36,12 +37,10 @@
                 android:background="@android:color/transparent"
                 android:drawablePadding="12dp"
                 android:padding="8dp"
-                android:hint="Username"
-                android:textColorHint="#fff"
+                android:hint="UserName"
+                android:textColorHint="#df546e"
                 android:maxLines="1"
-                android:drawableLeft="@drawable/ic_person_white_24dp"
                 android:layout_marginTop="70dp"/>
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -54,12 +53,10 @@
                 android:drawablePadding="12dp"
                 android:padding="8dp"
                 android:hint="E-mail"
-                android:textColorHint="#fff"
+                android:textColorHint="#df546e"
                 android:maxLines="1"
                 android:background="@android:color/transparent"
-                android:layout_marginTop="4dp"
-                android:drawableLeft="@drawable/ic_email_black_24dp"/>
-
+                android:layout_marginTop="4dp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -73,18 +70,15 @@
                 android:drawablePadding="12dp"
                 android:padding="8dp"
                 android:hint="Password"
-                android:textColorHint="#fff"
+                android:textColorHint="#df546e"
                 android:maxLines="1"
                 android:background="@android:color/transparent"
-                android:layout_marginTop="4dp"
-                android:drawableLeft="@drawable/ic_lock_white_24dp"/>
-
+                android:layout_marginTop="4dp"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,18 +86,35 @@
                 android:ems="10"
                 android:drawablePadding="12dp"
                 android:padding="8dp"
-                android:hint="Confirm password"
-                android:textColorHint="#fff"
+                android:hint="Confirm Password"
+                android:textColorHint="#df546e"
                 android:maxLines="1"
                 android:background="@android:color/transparent"
-                android:layout_marginTop="4dp"
-                android:drawableLeft="@drawable/ic_lock_white_24dp"/>
-
+                android:layout_marginTop="4dp"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:hint="Phone"
+                android:textColorHint="#df546e"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+
 
             <Button
                 android:layout_width="match_parent"
@@ -117,6 +128,16 @@
                 android:layout_marginTop="16dp"
                 android:clickable="true"
                 android:padding="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forget your Password? "
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#fff"
+                android:padding="16dp"
+                android:clickable="true"
+                android:layout_marginBottom="16dp"/>
 
         </LinearLayout>
     </ScrollView>

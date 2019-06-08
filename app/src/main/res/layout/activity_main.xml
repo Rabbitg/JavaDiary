@@ -1,109 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".MainActivity">
-
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+    <!-- 달력과 작성버튼  -->
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <Button
         android:id="@+id/picker_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
         android:background="@drawable/img_calendar" />
-
     <TextView
         android:id="@+id/txtCalendar"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@id/picker_btn"
-        android:layout_toRightOf="@id/picker_btn"
-        android:text=""
+        android:layout_marginTop="10dp"
+        android:text="date"
         android:textSize="20dp" />
+    <Button
+        android:id="@+id/postBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/checkbtn"
+        android:layout_gravity="right"
+         />
+    </LinearLayout>
 
+
+    <!-- 제목  -->
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:background="@null"
         android:hint="Title"
         android:textSize="30dp"
         android:textStyle="bold" />
+    </LinearLayout>
 
-
+    <!-- 선  -->
     <ImageView
         android:id="@+id/lineImage"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="5dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
         android:layerType="software"
         android:src="@drawable/dotted" />
-
-
-    <EditText
-        android:id="@+id/et_"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:background="@null"
-        android:hint="Content"
-        android:textStyle="normal" />
+        android:orientation="vertical">
+        <!-- 갤러리 -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_gallery"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            />
+        <ImageView
+            android:id="@+id/lineImage1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:layerType="software"
+            android:src="@drawable/dotted" />
+
+    </LinearLayout>
+
+
+    <!-- 내용 작성 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <EditText
+            android:id="@+id/contentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:hint="Content"
+            android:textStyle="normal" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/layout_emoticon"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="100dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
-
+    <LinearLayout
+        android:id="@+id/basic_emoticon_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
         <ImageView
             android:id="@+id/iv_emoticon1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/emotion_sad" />
+            android:src="@drawable/emotion_sad"
+            />
 
         <ImageView
             android:id="@+id/iv_emoticon2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/emotion_surprise" />
+            android:src="@drawable/emotion_surprise"
+            />
 
         <ImageView
             android:id="@+id/iv_emoticon3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/emotion_love" />
+            android:src="@drawable/emotion_love"
+            />
 
         <ImageView
             android:id="@+id/iv_emoticon4"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/emotion_happy" />
-
+            android:src="@drawable/emotion_happy"
+            />
         <ImageView
             android:id="@+id/iv_emoticon5"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/emotion_sleepy" />
+            android:src="@drawable/emotion_sleepy"
+            />
+    </LinearLayout>
+
+
+
+        <!-- 이모티콘 설정 -->
+        <ImageView
+            android:id="@+id/basic_emoticon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/basic"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/gallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/gallery"
+            android:visibility="visible" />
+
 
 
     </LinearLayout>
@@ -126,13 +200,7 @@
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
-    <CheckBox
-        android:id="@+id/checkBtn"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/checkbtn"
-        android:button="@null" />
 
 
-</RelativeLayout>
+
+</LinearLayout>
