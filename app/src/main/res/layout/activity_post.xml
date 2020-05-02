@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                     <!-- 일기 화면 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Activity.PostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- 달력 버튼 -->
+        <Button
+            android:id="@+id/picker_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:background="@drawable/img_calendar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--  달력 내용 출력 -->
+        <TextView
+            android:id="@+id/txtCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumbrush"
+            android:text="달력을 눌러서 날짜를 알려줘"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--  글 제목  -->
+        <EditText
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nanumsquare_round_eb"
+            android:gravity="center"
+            android:hint="제목"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 선 긋기  -->
+    <ImageView
+        android:id="@+id/lineImage"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentTop="true"
+        android:layerType="software"
+        android:src="@drawable/dotted" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 갤러리 버튼 -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_gallery" />
+        <!-- 선 긋기  -->
+        <ImageView
+            android:id="@+id/lineImage1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:layerType="software"
+            android:src="@drawable/dotted" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!--  글 내용  -->
+        <EditText
+            android:id="@+id/contentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/nanumsquare_round_eb"
+            android:hint="뭐했는지 적어줄래?"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <!--  각종 이모티콘 숨기기  -->
+    <LinearLayout
+        android:id="@+id/layout_emoticon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/basic_emoticon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_emoticon1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/emotion_sad" />
+
+            <ImageView
+                android:id="@+id/iv_emoticon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/emotion_surprise" />
+
+            <ImageView
+                android:id="@+id/iv_emoticon3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/emotion_love" />
+
+            <ImageView
+                android:id="@+id/iv_emoticon4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/emotion_happy" />
+
+            <ImageView
+                android:id="@+id/iv_emoticon5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/emotion_sleepy" />
+        </LinearLayout>
+
+
+        <!-- 기본 이모티콘 설정 -->
+        <ImageView
+            android:id="@+id/basic_emoticon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:src="@drawable/basic"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <!--  작성 버튼  -->
+    <Button
+        android:id="@+id/writeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selector_btn_write"
+        android:text="작성"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

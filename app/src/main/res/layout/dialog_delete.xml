@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                <!-- 다이얼로그(알림 메시지) 내용 삭제 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:id="@+id/tv_dlg_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare_round_eb"
+                android:gravity="center"
+                android:text="안내"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <!-- 내용 -->
+            <TextView
+                android:id="@+id/tv_dlg_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare_round_eb"
+                android:gravity="center"
+                android:text="내용"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <!-- 취소 -->
+            <Button
+                android:id="@+id/btn_dlg_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_cancel"
+                android:text="취소"
+                android:textColor="#ffffff" />
+            <!-- 확인 -->
+            <Button
+                android:id="@+id/btn_dlg_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_write"
+                android:text="확인"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

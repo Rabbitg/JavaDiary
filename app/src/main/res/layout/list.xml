@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+                                                    <!-- 리스트뷰 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,8 +12,38 @@
 
     <ListView
         android:id="@+id/listview"
+        android:divider="@null"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
     </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/emptyElement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="뭐라도 적어봐"
+            android:textColor="#525252"
+            android:textSize="19.0sp" />
+
+        <Button
+            android:id="@+id/img_edit"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_img_edit"
+            android:gravity="center_vertical"
+
+            />
+    </LinearLayout>
+
 </LinearLayout>

@@ -8,7 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 
 import java.util.Calendar;
-
+/***
+ * 달력에서 날짜 설정 액티비티이다.
+ */
 public class DatePickerFragment extends DialogFragment {
     @NonNull
     @Override
