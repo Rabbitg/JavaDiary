@@ -1,7 +1,7 @@
 # Diary
 
 <p align="center">
-  <img width="600" height="200" src="https://user-images.githubusercontent.com/51067267/80912951-b5465280-8d7b-11ea-8468-51aa6888f964.png">
+  <img src="https://user-images.githubusercontent.com/51067267/80912951-b5465280-8d7b-11ea-8468-51aa6888f964.png">
 </p>
 
 ![image](https://user-images.githubusercontent.com/51067267/80912959-bd9e8d80-8d7b-11ea-8043-e0017a542e49.png)
